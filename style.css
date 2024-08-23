@@ -1,0 +1,212 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: url(image/background-img.avif) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  height: 98vh;
+  width: 90%;
+  margin: 5rem auto;
+  overflow: hidden;
+  background: url(image/background-image2.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container header .navbar {
+  position: absolute;
+  top: 28px;
+  right: 15px;
+  width: 70rem;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.container header .navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container header .navbar ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.container header .navbar ul .active,
+.container header .navbar ul li a:hover {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 0 3rem;
+  cursor: pointer;
+}
+
+header .logo h1 {
+  padding: 2rem 3rem;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+header .menu {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  z-index: 3;
+  display: none;
+}
+
+header .menu i {
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+section {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 40px;
+}
+
+section .content {
+  height: 40rem;
+  display: flex;
+  flex: 1 0 1rem;
+  justify-content: center;
+  padding-left: 3rem;
+  flex-flow: column;
+}
+
+section .content h1 {
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+section .content p {
+  font-size: 2rem;
+  color: #333;
+}
+
+section .content button {
+  height: 3.5rem;
+  width: 13rem;
+  background: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 2rem 0;
+  animation: button 1s linear 1;
+  animation-delay: 1.5s;
+}
+
+@keyframes button {
+  from {
+    transform: scale(0) rotateZ(45deg);
+  }
+}
+
+section .content button:hover {
+  opacity: 8;
+}
+
+section .content button a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+section .content .icon {
+  margin-top: 5rem;
+  animation: icon 1s linear 1;
+  animation-delay: 1.5s;
+}
+
+@keyframes icon {
+  from {
+    transform: translateY(100px);
+  }
+}
+
+section .content .icon i {
+  margin: 0 1rem;
+  font-size: 4rem;
+  cursor: pointer;
+  color: #000;
+}
+
+section .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 1rem;
+}
+
+section .img > img {
+  height: 45rem;
+  animation: image 1s linear 1;
+  animation-delay: 1.5s;
+}
+
+@keyframes image {
+  from {
+    transform: translateY(-100px);
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: 45%;
+  }
+  header .menu {
+    display: block;
+  }
+  .container header .navbar {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .container header .navbar ul {
+    height: 100%;
+    width: 100%;
+    flex-flow: column;
+    background: #fff;
+  }
+  .container header .navbar ul li a {
+    font-size: 4rem;
+  }
+  section {
+    flex-flow: column-reverse;
+  }
+  section .content {
+    padding: 0 4rem;
+    text-align: center;
+  }
+  section .content .icon {
+    margin: 3rem auto;
+  }
+  section .content button {
+    margin: 3rem auto;
+  }
+}
+@media (max-width: 330px) {
+  section .img > img {
+    height: 35rem;
+  }
+}
